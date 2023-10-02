@@ -3,8 +3,7 @@
 by .ftgs#0000 (discord)
 
 ## Preview (.gif):
-> <img src="https://cdn.discordapp.com/attachments/1137456381167935501/1158495908850319370/27_33CFADC.gif?ex=651c74e4&is=651b2364&hm=49ef8d19ccd7f767768c565b44a610b29e4d0d95ca5ae2d0c32a3648ce390229&" alt="preview">
-
+> <img src="https://cdn.discordapp.com/attachments/1137456381167935501/1158496270420295720/preview.gif?ex=651c753a&is=651b23ba&hm=2d4ea98194aa887fc9ed4f18992598493b00f87df710f195cf10e31da92ecbe0&" alt="preview">
 ## Script (Example):
 
 ```lua
