@@ -3,7 +3,7 @@
 by .ftgs#0000 (discord)
 
 ## Preview (.gif):
-> <img src="https://cdn.discordapp.com/attachments/810891979147313184/1158495225346523256/27_33CFADC.gif?ex=651c7441&is=651b22c1&hm=ce8def46518293b1182159e96489239af1e991b48152119fa99c715c1af40870&" alt="preview">
+> <img src="https://cdn.discordapp.com/attachments/1137456381167935501/1158495908850319370/27_33CFADC.gif?ex=651c74e4&is=651b2364&hm=49ef8d19ccd7f767768c565b44a610b29e4d0d95ca5ae2d0c32a3648ce390229&" alt="preview">
 
 ## Script (Example):
 
@@ -19,6 +19,4 @@ end })
 TopBarApp:CreatePushButtonTextWithIcon({ Icon = "", Content = "Push Button", Callback = function() -- If icon = "" then the file icon is automatically placed
     print("Push Button Clicked")
 end })
- 
- 
 ```
