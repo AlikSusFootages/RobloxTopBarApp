@@ -258,15 +258,4 @@
          ButtonPushTextWithIconConfig.Callback()
      end)
  end 
- 
- topbar:CreateTextWithIcon({ Icon = "rbxassetid://10747376722", Content = "Hey" })
- 
- topbar:CreateButtonTextWithIcon({ Icon = "rbxassetid://10734898592", Content = "", Callback = function()
-     print("hello")
- end })
- 
- topbar:CreatePushButtonTextWithIcon({ Icon = "", Content = "bimbimbambam", Callback = function()
-     print("BIMBIMBAMBAM")
- end })
- 
- 
+ return topbar
