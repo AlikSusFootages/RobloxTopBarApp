@@ -1,10 +1,13 @@
 # RobloxTopBarApp
 
-by .ftgs#0000 (discord)
+> 👤 - By .ftgs#0000 (discord)
 
-## Preview (.gif):
+## 🖼️ - Preview (.gif):
 > <img src="preview.gif" alt="preview">
-## Script (Example):
+
+<hr>
+
+## 📜 - Script (Example):
 
 ```lua
 local TopBarApp = loadstring(game:HttpGet("https://raw.githubusercontent.com/AlikSusFootages/RobloxTopBarApp/main/src/file.lua"))()
