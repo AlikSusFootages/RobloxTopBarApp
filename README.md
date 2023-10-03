@@ -51,10 +51,8 @@ end })
 TopBarApp:CreatePushToggleTextWithIcon({ Icon="", Content="Push Toggle", Callback = function(state) 
     if state then
         print("Push Toggle on")
-        game.Workspace.LocalPlayer.Character.Humanoid.WalkSpeed = 200
     else
         print("Push Toggle off")
-        game.Workspace.LocalPlayer.Character.Humanoid.WalkSpeed = 16
     end
 end })
 
