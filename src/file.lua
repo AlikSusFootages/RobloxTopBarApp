@@ -63,9 +63,9 @@
  end 
  
  function topbar:CreateButtonTextWithIcon(ButtonTextWithIconConfig) 
-     ButtonTextWithIconConfig.Icon = ButtonTextWithIconConfig.Icon or ""
-     ButtonTextWithIconConfig.Content = ButtonTextWithIconConfig.Content or "Content"
-     ButtonTextWithIconConfig.Callback = ButtonTextWithIconConfig.Callback or function() end
+     ToggleTextWithIconConfig.Icon = ToggleTextWithIconConfig.Icon or ""
+     ToggleTextWithIconConfig.Content = ToggleTextWithIconConfig.Content or "Content"
+     ToggleTextWithIconConfig.Callback = ToggleTextWithIconConfig.Callback or function() end
   
      local frame = Instance.new("Frame", game.CoreGui.TopBarApp.TopBarFrame.LeftFrame) 
      frame.LayoutOrder = 3 
@@ -94,21 +94,21 @@
      text.AnchorPoint = Vector2.new(1,0) 
      text.Position = UDim2.new(1,0,0,0) 
      text.BackgroundTransparency = 1 
-     text.Text = ButtonTextWithIconConfig.Content 
+     text.Text = ToggleTextWithIconConfig.Content 
      text.Font = "Gotham"
      text.TextSize = 15 
      text.TextColor3 = Color3.fromRGB(255,255,255)
      
      frame.Size = UDim2.new(0, text.TextBounds.X + 30, 1, 0)
      
-     if ButtonTextWithIconConfig.Icon == "" then
+     if ToggleTextWithIconConfig.Icon == "" then
      
      else
          text.Size = UDim2.new(1, -12, 1, 0) 
          frame.Size = UDim2.new(0, text.TextBounds.X + 45, 1, 0)
      end
      
-     if ButtonTextWithIconConfig.Content == "" then
+     if ToggleTextWithIconConfig.Content == "" then
          frame.Size = UDim2.new(0, 33, 1, 0)
      end
   
@@ -116,7 +116,7 @@
      icon.Size = UDim2.new(0, 15, 0, 15) 
      icon.Position = UDim2.new(0, 9, 0, 8) 
      icon.BackgroundTransparency = 1 
-     icon.Image = ButtonTextWithIconConfig.Icon
+     icon.Image = ToggleTextWithIconConfig.Icon
      icon.ImageColor3 = Color3.fromRGB(255,255,255)
   
      local anim = TweenService:Create(frame2, TweenInfo.new(0.5), {Position = UDim2.new(0, 0, 1, 0)}) 
@@ -151,7 +151,7 @@
      end)
      
      frame2.MouseButton1Click:Connect(function()
-         ButtonTextWithIconConfig.Callback()
+         ToggleTextWithIconConfig.Callback()
      end)
  end 
  
@@ -258,4 +258,227 @@
          ButtonPushTextWithIconConfig.Callback()
      end)
  end 
+ 
+ function topbar:CreateToggleTextWithIcon(ToggleTextWithIconConfig) 
+     ToggleTextWithIconConfig.Icon = ToggleTextWithIconConfig.Icon or ""
+     ToggleTextWithIconConfig.Content = ToggleTextWithIconConfig.Content or "Content"
+     ToggleTextWithIconConfig.Callback = ToggleTextWithIconConfig.Callback or function() end
+  
+     local frame = Instance.new("Frame", game.CoreGui.TopBarApp.TopBarFrame.LeftFrame) 
+     frame.LayoutOrder = 3 
+     frame.BackgroundTransparency = 1 
+     frame.Name = "__TopBarApp__ToggleTextWithIcon__"
+  
+     local TweenService = game:GetService("TweenService") 
+  
+     game.CoreGui.TopBarApp.TopBarFrame.LeftFrame.ChatIcon.Size = UDim2.new(0, 32, 1, 0) 
+  
+  
+     local frame2 = Instance.new("TextButton", frame) 
+     frame2.Size = UDim2.new(1, 0, 0, 32) 
+     frame2.BorderSizePixel = 0 
+     frame2.AnchorPoint = Vector2.new(0, 1) 
+     frame2.Position = UDim2.new(0,0,0,0) 
+     frame2.BackgroundColor3 = Color3.fromRGB(0,0,0) 
+     frame2.BackgroundTransparency = 0.5 
+     frame2.TextColor3 = Color3.fromRGB(255,255,255) 
+     frame2.Text = "" 
+     frame2.TextSize = 15
+     frame2.AutoButtonColor = false
+  
+     local text = Instance.new("TextLabel", frame2) 
+     text.Size = UDim2.new(1, 0, 1, 0) 
+     text.AnchorPoint = Vector2.new(1,0) 
+     text.Position = UDim2.new(1,0,0,0) 
+     text.BackgroundTransparency = 1 
+     text.Text = ToggleTextWithIconConfig.Content 
+     text.Font = "Gotham"
+     text.TextSize = 15 
+     text.TextColor3 = Color3.fromRGB(255,255,255)
+     
+     frame.Size = UDim2.new(0, text.TextBounds.X + 30, 1, 0)
+     
+     if ToggleTextWithIconConfig.Icon == "" then
+     
+     else
+         text.Size = UDim2.new(1, -12, 1, 0) 
+         frame.Size = UDim2.new(0, text.TextBounds.X + 45, 1, 0)
+     end
+     
+     if ToggleTextWithIconConfig.Content == "" then
+         frame.Size = UDim2.new(0, 33, 1, 0)
+     end
+  
+     local icon = Instance.new("ImageLabel", frame2) 
+     icon.Size = UDim2.new(0, 15, 0, 15) 
+     icon.Position = UDim2.new(0, 9, 0, 8) 
+     icon.BackgroundTransparency = 1 
+     icon.Image = ToggleTextWithIconConfig.Icon
+     icon.ImageColor3 = Color3.fromRGB(255,255,255)
+  
+     local anim = TweenService:Create(frame2, TweenInfo.new(0.5), {Position = UDim2.new(0, 0, 1, 0)}) 
+  
+     anim:Play() 
+  
+     local uicorner = Instance.new("UICorner", frame2) 
+     uicorner.CornerRadius = UDim.new(0,8) 
+     
+     local changeColorButton = TweenService:Create(frame2, TweenInfo.new(0.1), {BackgroundColor3 = Color3.fromRGB(233,233,233)})
+     local changeColorButtonTransparency = TweenService:Create(frame2, TweenInfo.new(0.1), {BackgroundTransparency = 0})
+     local changeColorButtonText = TweenService:Create(text, TweenInfo.new(0.1), {TextColor3 = Color3.fromRGB(10,10,10)})
+     local changeColorButtonIcon = TweenService:Create(icon, TweenInfo.new(0.1), {ImageColor3 = Color3.fromRGB(10,10,10)})
+     
+     local UNchangeColorButton = TweenService:Create(frame2, TweenInfo.new(0.1), {BackgroundColor3 = Color3.fromRGB(0,0,0)})
+     local UNchangeColorButtonTransparency = TweenService:Create(frame2, TweenInfo.new(0.1), {BackgroundTransparency = 0.5})
+     local UNchangeColorButtonText = TweenService:Create(text, TweenInfo.new(0.1), {TextColor3 = Color3.fromRGB(255,255,255)})
+     local UNchangeColorButtonIcon = TweenService:Create(icon, TweenInfo.new(0.1), {ImageColor3 = Color3.fromRGB(255,255,255)})
+     
+     frame2.MouseButton1Down:Connect(function()
+         changeColorButton:Play()
+         changeColorButtonText:Play()
+         changeColorButtonIcon:Play()
+         changeColorButtonTransparency:Play()
+     end)
+     
+     local toggled = false
+     
+     frame2.MouseButton1Click:Connect(function()
+         if toggled == false then
+             changeColorButton:Play()
+             changeColorButtonText:Play()
+             changeColorButtonIcon:Play()
+             changeColorButtonTransparency:Play()
+             
+             toggled = not toggled
+             pcall(ToggleTextWithIconConfig.Callback, toggled)
+             
+         else
+             UNchangeColorButton:Play()
+             UNchangeColorButtonText:Play()
+             UNchangeColorButtonIcon:Play()
+             UNchangeColorButtonTransparency:Play()
+             
+             toggled = false
+             pcall(ToggleTextWithIconConfig.Callback, toggled)
+         end
+     end)
+ end 
+ 
+ function topbar:CreatePushToggleTextWithIcon(TogglePushTextWithIconConfig) 
+     TogglePushTextWithIconConfig.Icon = TogglePushTextWithIconConfig.Icon or "rbxassetid://10723374641"
+     TogglePushTextWithIconConfig.Content = TogglePushTextWithIconConfig.Content or "Content"
+     TogglePushTextWithIconConfig.Callback = TogglePushTextWithIconConfig.Callback or function() end
+  
+     local frame = Instance.new("Frame", game.CoreGui.TopBarApp.TopBarFrame.LeftFrame) 
+     frame.LayoutOrder = 3 
+     frame.BackgroundTransparency = 1 
+     frame.Name = "__TopBarApp__PushToggleTextWithIcon__"
+  
+     local TweenService = game:GetService("TweenService") 
+  
+     game.CoreGui.TopBarApp.TopBarFrame.LeftFrame.ChatIcon.Size = UDim2.new(0, 32, 1, 0) 
+  
+  
+     local frame2 = Instance.new("TextButton", frame) 
+     frame2.Size = UDim2.new(1, 0, 0, 32) 
+     frame2.BorderSizePixel = 0 
+     frame2.AnchorPoint = Vector2.new(0, 1) 
+     frame2.Position = UDim2.new(0,0,0,0) 
+     frame2.BackgroundColor3 = Color3.fromRGB(0,0,0) 
+     frame2.BackgroundTransparency = 0.5 
+     frame2.TextColor3 = Color3.fromRGB(255,255,255) 
+     frame2.Text = "" 
+     frame2.TextSize = 15
+     frame2.AutoButtonColor = false
+     frame2.ClipsDescendants = true
+  
+     local text = Instance.new("TextLabel", frame2) 
+     text.Size = UDim2.new(1, -12, 1, 0) 
+     text.AnchorPoint = Vector2.new(0,0) 
+     text.Position = UDim2.new(2.3,0,0,0) 
+     text.BackgroundTransparency = 1 
+     text.Text = TogglePushTextWithIconConfig.Content 
+     text.Font = "Gotham"
+     text.TextSize = 15 
+     text.TextColor3 = Color3.fromRGB(255,255,255)
+     
+     frame.Size = UDim2.new(0, 33, 1, 0)
+     
+     local icon = Instance.new("ImageLabel", frame2) 
+     icon.Size = UDim2.new(0, 15, 0, 15) 
+     icon.Position = UDim2.new(0, 9, 0, 8) 
+     icon.BackgroundTransparency = 1 
+     icon.Image = TogglePushTextWithIconConfig.Icon
+     icon.ImageColor3 = Color3.fromRGB(255,255,255)
+     
+     if TogglePushTextWithIconConfig.Icon == "" then
+         icon.Image = "rbxassetid://10723374641"
+         frame.Size = UDim2.new(0, 33, 1, 0)
+     else
+         text.Size = UDim2.new(1, -12, 1, 0) 
+         frame.Size = UDim2.new(0, 33, 1, 0)
+     end
+     
+     if TogglePushTextWithIconConfig.Content == "" then
+         frame.Size = UDim2.new(0, 33, 1, 0)
+     end
+  
+  
+     local anim = TweenService:Create(frame2, TweenInfo.new(0.5), {Position = UDim2.new(0, 0, 1, 0)}) 
+  
+     anim:Play() 
+  
+     local uicorner = Instance.new("UICorner", frame2) 
+     uicorner.CornerRadius = UDim.new(0,8) 
+     
+     local changeColorButton = TweenService:Create(frame2, TweenInfo.new(0.1), {BackgroundColor3 = Color3.fromRGB(233,233,233)})
+     local changeColorButtonTransparency = TweenService:Create(frame2, TweenInfo.new(0.1), {BackgroundTransparency = 0})
+     local changeColorButtonText = TweenService:Create(text, TweenInfo.new(0.1), {TextColor3 = Color3.fromRGB(10,10,10)})
+     local changeColorButtonIcon = TweenService:Create(icon, TweenInfo.new(0.1), {ImageColor3 = Color3.fromRGB(10,10,10)})
+     local changeSizeButton = TweenService:Create(frame, TweenInfo.new(0.1), {Size = UDim2.new(0, text.TextBounds.X + 45, 1, 0)})
+     local changeSizeButtonText = TweenService:Create(text, TweenInfo.new(0.1), {Position = UDim2.new(0, 17, 0, 0)})
+     
+     local UNchangeColorButton = TweenService:Create(frame2, TweenInfo.new(0.1), {BackgroundColor3 = Color3.fromRGB(0,0,0)})
+     local UNchangeColorButtonTransparency = TweenService:Create(frame2, TweenInfo.new(0.1), {BackgroundTransparency = 0.5})
+     local UNchangeColorButtonText = TweenService:Create(text, TweenInfo.new(0.1), {TextColor3 = Color3.fromRGB(255,255,255)})
+     local UNchangeColorButtonIcon = TweenService:Create(icon, TweenInfo.new(0.1), {ImageColor3 = Color3.fromRGB(255,255,255)})
+     local UNchangeSizeButton = TweenService:Create(frame, TweenInfo.new(0.1), {Size = UDim2.new(0, 33, 1, 0)})
+     local UNchangeSizeButtonText = TweenService:Create(text, TweenInfo.new(0.1), {Position = UDim2.new(2.3,0, 0, 0)})
+     
+     frame2.MouseButton1Down:Connect(function()
+         changeColorButton:Play()
+         changeColorButtonText:Play()
+         changeColorButtonIcon:Play()
+         changeColorButtonTransparency:Play()
+         changeSizeButton:Play()
+         changeSizeButtonText:Play()
+     end)
+     
+     local toggled = false 
+     
+     frame2.MouseButton1Click:Connect(function()
+         if toggled == false then
+             changeColorButton:Play()
+             changeColorButtonText:Play()
+             changeColorButtonIcon:Play()
+             changeColorButtonTransparency:Play()
+             changeSizeButton:Play()
+             changeSizeButtonText:Play()
+             
+             toggled = not toggled
+             pcall(TogglePushTextWithIconConfig.Callback, toggled)
+             
+         else
+             UNchangeColorButton:Play()
+             UNchangeColorButtonText:Play()
+             UNchangeColorButtonIcon:Play()
+             UNchangeColorButtonTransparency:Play()
+             UNchangeSizeButton:Play()
+             UNchangeSizeButtonText:Play()
+             
+             toggled = false
+             pcall(TogglePushTextWithIconConfig.Callback, toggled)
+         end
+     end)
+ end
  return topbar
