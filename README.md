@@ -58,3 +58,15 @@ end })
 
 -- ^^^^ ^^^^^^ --
 ```
+
+
+ChangeLogs:
+
+- 1.0.0:
+ - Script Release!
+ - Added Buttons with icon
+ - Added Push Buttons with icon
+
+- 1.0.1:
+ - Added Toggle with icon
+ - Added Push Toggle with icon
