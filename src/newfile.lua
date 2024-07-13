@@ -1,5 +1,28 @@
 local unibar = game:GetService("Players").LocalPlayer.PlayerGui.TopbarStandard.Holders.Left
 
+local topbar = {}
+
+function topbar:CreateTextWithIcon(TextWithIconConfig)
+    TextWithIconConfig.Icon = TextWithIconConfig.Icon or ""
+    TextWithIconConfig.Content = TextWithIconConfig.Content or "Content"
+    
+    local Frame = Instance.new("TextLabel", unibar)
+    Frame.BackgroundColor3 = Color3.fromRGB(0,0,0)
+    Frame.BackgroundTransparency = 0.3
+    Frame.Size = UDim2.new(0,0,0,44)
+    Frame.Text = Content
+    Frame.AutomaticSize = "X"
+    Frame.Font = "BuilderSans"
+    Frame.TextSize = 20
+    Frame.TextColor3 = Color3.new(1,1,1)
+    
+    local UICorner = Instance.new("UICorner", Frame)
+    UICorner.CornerRadius = UDim.new(1,1)
+    
+    local UIPadding = Instance.new("UIPadding", Frame)
+    UIPadding.PaddingLeft = UDim.new(0,12)
+    UIPadding.PaddingRight = UDim.new(0,12)
+end
 local frame = Instance.new("TextButton", unibar)
 frame.BackgroundColor3 = Color3.fromRGB(0,0,0)
 frame.BackgroundTransparency = 0.3
