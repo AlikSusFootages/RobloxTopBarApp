@@ -61,3 +61,11 @@ end)
 ]]
 
 return topbar
+
+-- example
+
+--[[
+
+local TopbarApp = loadstring(game:HttpGet("https://raw.githubusercontent.com/AlikSusFootages/RobloxTopBarApp/main/src/file.lua"))()
+
+]]
