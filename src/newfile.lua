@@ -5,6 +5,7 @@ local topbar = {}
 function topbar:CreateTextWithIcon(TextWithIconConfig)
     TextWithIconConfig.Icon = TextWithIconConfig.Icon or ""
     TextWithIconConfig.Content = TextWithIconConfig.Content or "Content"
+    TextWithIconConfig.Order = TextWithIconConfig.Order or 20
     
     local Frame = Instance.new("TextLabel", unibar)
     Frame.BackgroundColor3 = Color3.fromRGB(0,0,0)
@@ -15,6 +16,7 @@ function topbar:CreateTextWithIcon(TextWithIconConfig)
     Frame.Font = "BuilderSans"
     Frame.TextSize = 20
     Frame.TextColor3 = Color3.new(1,1,1)
+    Frame.LayoutOrder = TextWithIconConfig.Order
     
     local UICorner = Instance.new("UICorner", Frame)
     UICorner.CornerRadius = UDim.new(1,1)
