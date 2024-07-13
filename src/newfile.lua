@@ -23,6 +23,7 @@ function topbar:CreateTextWithIcon(TextWithIconConfig)
     UIPadding.PaddingLeft = UDim.new(0,12)
     UIPadding.PaddingRight = UDim.new(0,12)
 end
+--[[
 local frame = Instance.new("TextButton", unibar)
 frame.BackgroundColor3 = Color3.fromRGB(0,0,0)
 frame.BackgroundTransparency = 0.3
@@ -57,3 +58,6 @@ end)
 frame.MouseLeave:Connect(function()
     frame2.Visible = false
 end)
+]]
+
+return topbar
