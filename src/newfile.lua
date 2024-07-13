@@ -71,7 +71,7 @@ return topbar
 local TopbarApp = loadstring(game:HttpGet("https://raw.githubusercontent.com/AlikSusFootages/RobloxTopBarApp/main/src/newfile.lua"))()
 
 TopbarApp:CreateTextWithIcon({
-    Icon = "",
+    Icon = "18362438233",
     Content = "example muhahaha",
     Order = 20
 })
