@@ -10,7 +10,7 @@ function topbar:CreateTextWithIcon(TextWithIconConfig)
     Frame.BackgroundColor3 = Color3.fromRGB(0,0,0)
     Frame.BackgroundTransparency = 0.3
     Frame.Size = UDim2.new(0,0,0,44)
-    Frame.Text = Content
+    Frame.Text = TextWithIconConfig.Content
     Frame.AutomaticSize = "X"
     Frame.Font = "BuilderSans"
     Frame.TextSize = 20
