@@ -37,7 +37,7 @@
      
      frame.Size = UDim2.new(0, text.TextBounds.X + 30, 1, 0)
      
-     if TextWithIconConfig.Icon != "" then
+     if TextWithIconConfig.Icon ~= "" then
          text.Size = UDim2.new(1, -12, 1, 0) 
          frame.Size = UDim2.new(0, text.TextBounds.X + 45, 1, 0)
      end
