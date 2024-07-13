@@ -2,6 +2,13 @@ local unibar = game:GetService("Players").LocalPlayer.PlayerGui.TopbarStandard.H
 
 local topbar = {}
 
+local function GetIcon(Name) 
+    if Name ~= nil and Icons["lucide-" .. Name] then 
+        return Icons["lucide-" .. Name] 
+    end 
+    return nil 
+end
+
 function topbar:CreateTextWithIcon(TextWithIconConfig)
     TextWithIconConfig.Icon = TextWithIconConfig.Icon or ""
     TextWithIconConfig.Content = TextWithIconConfig.Content or "Content"
@@ -27,7 +34,7 @@ function topbar:CreateTextWithIcon(TextWithIconConfig)
     
     if TextWithIconConfig.Icon ~= "" then
         local ImageLabel = Instance.new("ImageLabel", Frame)
-        ImageLabel.Image = TextWithIconConfig.Icon
+        ImageLabel.Image = GetIcon(TextWithIconConfig.Icon)
         ImageLabel.Size = UDim2.new(0,36,0,36)
         ImageLabel.Position = UDim2.new(0,-48,0.5,0)
         ImageLabel.AnchorPoint = Vector2.new(0,0.5)
