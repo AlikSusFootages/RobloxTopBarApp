@@ -33,6 +33,9 @@ function topbar:CreateTextWithIcon(TextWithIconConfig)
         ImageLabel.AnchorPoint = Vector2.new(0,0.5)
         ImageLabel.BackgroundTransparency = 1
         
+        local UICorner2 = Instance.new("UICorner", ImageLabel)
+        UICorner2.CornerRadius = UDim.new(1,1)
+        
         UIPadding.PaddingLeft = UDim.new(0,56)
     end
 end
