@@ -20,8 +20,8 @@ function topbar:CreateTextWithIcon(TextWithIconConfig)
     UICorner.CornerRadius = UDim.new(1,1)
     
     local UIPadding = Instance.new("UIPadding", Frame)
-    UIPadding.PaddingLeft = UDim.new(0,12)
-    UIPadding.PaddingRight = UDim.new(0,12)
+    UIPadding.PaddingLeft = UDim.new(0,16)
+    UIPadding.PaddingRight = UDim.new(0,16)
 end
 --[[
 local frame = Instance.new("TextButton", unibar)
