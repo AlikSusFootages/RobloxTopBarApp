@@ -68,11 +68,12 @@ return topbar
 
 --[[
 
-local TopbarApp = loadstring(game:HttpGet("https://raw.githubusercontent.com/AlikSusFootages/RobloxTopBarApp/main/src/file.lua"))()
+local TopbarApp = loadstring(game:HttpGet("https://raw.githubusercontent.com/AlikSusFootages/RobloxTopBarApp/main/src/newfile.lua"))()
 
 TopbarApp:CreateTextWithIcon({
     Icon = "",
-    Content = "example muhahaha"
+    Content = "example muhahaha",
+    Order = 20
 })
 
 ]]
