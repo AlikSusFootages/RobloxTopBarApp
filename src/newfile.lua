@@ -43,7 +43,7 @@ function topbar:CreateTextWithIcon(TextWithIconConfig)
         ImageLabel.AnchorPoint = Vector2.new(0,0.5)
         ImageLabel.BackgroundTransparency = 1
         
-        UIPadding.PaddingLeft = UDim.new(0,52)
+        UIPadding.PaddingLeft = UDim.new(0,47)
     end
 end
 --[[
