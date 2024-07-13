@@ -27,7 +27,7 @@ function topbar:CreateTextWithIcon(TextWithIconConfig)
     
     if TextWithIconConfig.Icon ~= "" then
         local ImageLabel = Instance.new("ImageLabel", Frame)
-        ImageLabel.Image = "rbxassetid://" .. TextWithIconConfig.Icon
+        ImageLabel.Image = TextWithIconConfig.Icon
         ImageLabel.Size = UDim2.new(0,36,0,36)
         ImageLabel.Position = UDim2.new(0,-48,0.5,0)
         ImageLabel.AnchorPoint = Vector2.new(0,0.5)
