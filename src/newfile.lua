@@ -39,7 +39,7 @@ end
 do
     local UnibarMenu = game.CoreGui.TopBarApp.UnibarLeftFrame.UnibarMenu
     
-    unibar.Position = UDim2.new(0, UnibarMenu.Size.X.Offset + 12, 0, 0)
+    Parentframe.Position = UDim2.new(0, UnibarMenu.Size.X.Offset + 12, 0, 0)
     
     UnibarMenu:GetPropertyChangedSignal("Size"):Connect(function()
         unibar.Position = UDim2.new(0, UnibarMenu.Size.X.Offset + 12, 0, 0)
