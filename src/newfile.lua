@@ -46,7 +46,7 @@ function topbar:CreateTextWithIcon(TextWithIconConfig)
         local ImageLabel = Instance.new("ImageLabel", Frame)
         ImageLabel.Image = GetIcon(TextWithIconConfig.Icon)
         ImageLabel.Size = UDim2.new(0,26,0,26)
-        ImageLabel.Position = UDim2.new(0,-43,0.5,0)
+        ImageLabel.Position = UDim2.new(0,-37,0.5,0)
         ImageLabel.AnchorPoint = Vector2.new(0,0.5)
         ImageLabel.BackgroundTransparency = 1
         
