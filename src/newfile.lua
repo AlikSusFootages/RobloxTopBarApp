@@ -23,7 +23,7 @@ do
     
     
     UnibarMenu:GetPropertyChangedSignal("Size"):Connect(function()
-        unibar.Position = UDim2.new(0, UnibarMenu.Size.X.Offset + 154, 0, 0)
+        unibar.Position = UDim2.new(0, UnibarMenu.Size.X.Offset + 66, 0, 0)
     end)
 end
 
