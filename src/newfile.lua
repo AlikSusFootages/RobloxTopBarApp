@@ -11,7 +11,7 @@ if game.CoreGui.TopBarApp.TopBarFrame:FindFirstChild("TopBarAppV2") then
 
 else
     
-    local Parentframe = Instance.new("Frame", unibar)
+    Parentframe = Instance.new("Frame", unibar)
     Parentframe.Size = UDim2.new(1,0,1,2)
     Parentframe.Position = UDim2.new(0,88,0,0)
     Parentframe.BackgroundTransparency = 1
