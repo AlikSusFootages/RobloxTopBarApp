@@ -20,7 +20,7 @@ do
     --UnibarMenu:GetPropertyChangedSignal("Size"):Connect(function()
     while true do
         unibar.Position = UDim2.new(0, UnibarMenu.Size.X.Offset, 0, 0)
-    end)
+    end
 end
 
 function topbar:CreateTextWithIcon(TextWithIconConfig)
