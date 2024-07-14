@@ -21,6 +21,7 @@ end
 do
     local UnibarMenu = unibar.Parent.Parent.UnibarLeftFrame.UnibarMenu
     
+    unibar.Position = UDim2.new(0, UnibarMenu.Size.X.Offset + 66, 0, 0)
     
     UnibarMenu:GetPropertyChangedSignal("Size"):Connect(function()
         unibar.Position = UDim2.new(0, UnibarMenu.Size.X.Offset + 66, 0, 0)
