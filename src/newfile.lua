@@ -11,7 +11,7 @@ unibar.BackgroundTransparency = 1
 local UIListLayout = Instance.new("UIListLayout", unibar)
 UIListLayout.FillDirection = "Horizontal"
 UIListLayout.Padding = UDim.new(0,12)
-UIListLayout.SortOrder = LayoutOrder
+UIListLayout.SortOrder = "LayoutOrder"
 UIListLayout.VerticalAlignment = "Center"
 UIListLayout.HorizontalAlignment = "Ldft"
 
