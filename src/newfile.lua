@@ -3,7 +3,7 @@ local Icons = loadstring(game:HttpGet("https://raw.githubusercontent.com/dawid-s
 --local unibar = game:GetService("Players").LocalPlayer.PlayerGui.TopbarStandard.Holders.Left
 local unibar = game.CoreGui.TopBarApp.TopBarFrame
 
-if unibar.TopBarAppV2 then
+if unibar:FindFirstChild(TopBarAppV2) then
     
     unibar = unibar.TopBarAppV2
 
