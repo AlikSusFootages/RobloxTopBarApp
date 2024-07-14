@@ -35,7 +35,7 @@ local function GetIcon(Name)
 end
 
 do
-    local UnibarMenu = unibar.Parent.Parent.UnibarLeftFrame.UnibarMenu
+    local UnibarMenu = game.CoreGui.TopBarApp.UnibarLeftFrame.UnibarMenu
     
     unibar.Position = UDim2.new(0, UnibarMenu.Size.X.Offset + 66, 0, 0)
     
