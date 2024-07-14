@@ -12,7 +12,7 @@ if game.CoreGui.TopBarApp.TopBarFrame:FindFirstChild("TopBarAppV2") then
 else
     
     Parentframe = Instance.new("Frame", unibar)
-    Parentframe.Size = UDim2.new(1,0,1,2)
+    Parentframe.Size = UDim2.new(1,0,1,0)
     Parentframe.Position = UDim2.new(0,88,0,0)
     Parentframe.BackgroundTransparency = 1
     Parentframe.Name = "TopBarAppV2"
@@ -21,7 +21,7 @@ else
     UIListLayout.FillDirection = "Horizontal"
     UIListLayout.Padding = UDim.new(0,12)
     UIListLayout.SortOrder = "LayoutOrder"
-    UIListLayout.VerticalAlignment = "Top"
+    UIListLayout.VerticalAlignment = "Center"
     UIListLayout.HorizontalAlignment = "Left"
     
 end
