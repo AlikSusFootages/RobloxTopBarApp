@@ -3,17 +3,19 @@ local Icons = loadstring(game:HttpGet("https://raw.githubusercontent.com/dawid-s
 --local unibar = game:GetService("Players").LocalPlayer.PlayerGui.TopbarStandard.Holders.Left
 local unibar = game.CoreGui.TopBarApp.TopBarFrame
 
+local Parentframe 
+
 if game.CoreGui.TopBarApp.TopBarFrame:FindFirstChild("TopBarAppV2") then
     
-    unibar = unibar.TopBarAppV2
+    Parentframe = unibar.TopBarAppV2
 
 else
     
-    local unibar = Instance.new("Frame", unibar)
-    unibar.Size = UDim2.new(1,0,1,2)
-    unibar.Position = UDim2.new(0,88,0,0)
-    unibar.BackgroundTransparency = 1
-    unibar.Name = "TopBarAppV2"
+    local Parentframe = Instance.new("Frame", unibar)
+    Parentframe.Size = UDim2.new(1,0,1,2)
+    Parentframe.Position = UDim2.new(0,88,0,0)
+    Parentframe.BackgroundTransparency = 1
+    Parentframe.Name = "TopBarAppV2"
     
     local UIListLayout = Instance.new("UIListLayout", unibar)
     UIListLayout.FillDirection = "Horizontal"
