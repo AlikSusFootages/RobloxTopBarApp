@@ -15,6 +15,10 @@ end
 
 local UnibarMenu = unibar.Parent.UnibarMenu
 
+UnibarMenu:GetPropertyChangedSignal("AbsoluteSize"):Connect(function()
+    unibar.Position = UDim2.new(0, UnibarMenu.AbsoluteSize.X, 0, 0)
+end)
+
 function topbar:CreateTextWithIcon(TextWithIconConfig)
     TextWithIconConfig.Icon = TextWithIconConfig.Icon or ""
     TextWithIconConfig.Content = TextWithIconConfig.Content or "Content"
