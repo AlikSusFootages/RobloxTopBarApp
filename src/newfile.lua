@@ -42,7 +42,7 @@ do
     Parentframe.Position = UDim2.new(0, 12, 0, 0)
     
     UnibarMenu:GetPropertyChangedSignal("Size"):Connect(function()
-        unibar.Position = UDim2.new(0, 12, 0, 0)
+        Parentframe.Position = UDim2.new(0, 12, 0, 0)
     end)
 end
 
