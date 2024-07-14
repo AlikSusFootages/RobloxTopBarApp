@@ -17,7 +17,7 @@ else
     Parentframe.BackgroundTransparency = 1
     Parentframe.Name = "TopBarAppV2"
     
-    local UIListLayout = Instance.new("UIListLayout", unibar)
+    local UIListLayout = Instance.new("UIListLayout", Parentframe)
     UIListLayout.FillDirection = "Horizontal"
     UIListLayout.Padding = UDim.new(0,12)
     UIListLayout.SortOrder = "LayoutOrder"
