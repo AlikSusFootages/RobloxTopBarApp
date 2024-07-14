@@ -1,7 +1,12 @@
 local Icons = loadstring(game:HttpGet("https://raw.githubusercontent.com/dawid-scripts/Fluent/master/src/Icons.lua"))().assets
 
 --local unibar = game:GetService("Players").LocalPlayer.PlayerGui.TopbarStandard.Holders.Left
-local unibar = game.CoreGui.TopBarApp.UnibarLeftFrame.StackedElements
+local unibar = game.CoreGui.TopBarApp.TopBarFrame
+
+local unibar = Instance.new("Frame", unibar)
+unibar.Size = UDim2.new(1,0,1,0)
+unibar.Position = UDim2.new(0,88,0,0)
+unibar.BackgroundTransparency = 1
 
 
 local topbar = {}
@@ -17,10 +22,9 @@ do
     local UnibarMenu = unibar.Parent.UnibarMenu
     
     
-    --UnibarMenu:GetPropertyChangedSignal("Size"):Connect(function()
-    while wait(0.05) do
+    UnibarMenu:GetPropertyChangedSignal("Size"):Connect(function()
         unibar.Position = UDim2.new(0, UnibarMenu.Size.X.Offset, 0, 0)
-    end
+    end)
 end
 
 function topbar:CreateTextWithIcon(TextWithIconConfig)
