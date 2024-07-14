@@ -19,7 +19,7 @@ local function GetIcon(Name)
 end
 
 do
-    local UnibarMenu = unibar.Parent.UnibarMenu
+    local UnibarMenu = unibar.Parent.Parent.UnibarMenu
     
     
     UnibarMenu:GetPropertyChangedSignal("Size"):Connect(function()
