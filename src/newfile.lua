@@ -1,9 +1,9 @@
 local Icons = loadstring(game:HttpGet("https://raw.githubusercontent.com/dawid-scripts/Fluent/master/src/Icons.lua"))().assets
 
 --local unibar = game:GetService("Players").LocalPlayer.PlayerGui.TopbarStandard.Holders.Left
-local unibar = game.CoreGui.TopBarApp.TopBarFrame
+local unibar = game.CoreGui.TopBarApp.TopBarFrame.TopBarAppV2
 
-if unibar:FindFirstChild("TopBarAppV2") then
+if game.CoreGui.TopBarApp.TopBarFrame.TopBarAppV2:FindFirstChild("TopBarAppV2") then
     
     unibar = unibar.TopBarAppV2
 
