@@ -8,6 +8,12 @@ unibar.Size = UDim2.new(1,0,1,0)
 unibar.Position = UDim2.new(0,88,0,0)
 unibar.BackgroundTransparency = 1
 
+local UIListLayout = Instance.new("UIListLayout", unibar)
+UIListLayout.FillDirection = "Horizontal"
+UIListLayout.Padding = UDim.new(0,12)
+UIListLayout.SortOrder = LayoutOrder
+UIListLayout.VerticalAlignment = "Center"
+
 
 local topbar = {}
 
