@@ -21,7 +21,7 @@ else
     UIListLayout.FillDirection = "Horizontal"
     UIListLayout.Padding = UDim.new(0,12)
     UIListLayout.SortOrder = "LayoutOrder"
-    UIListLayout.VerticalAlignment = "Bottom"
+    UIListLayout.VerticalAlignment = "Top"
     UIListLayout.HorizontalAlignment = "Left"
     
 end
