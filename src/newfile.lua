@@ -37,11 +37,11 @@ end
 do
     local UnibarMenu = game.CoreGui.TopBarApp.UnibarLeftFrame.UnibarMenu
     
-    unibar.Position = UDim2.new(0, UnibarMenu.Size.X.Offset + 66, 0, 0)
+    unibar.Position = UDim2.new(0, 6, 0, 0)
     
-    UnibarMenu:GetPropertyChangedSignal("Size"):Connect(function()
-        unibar.Position = UDim2.new(0, UnibarMenu.Size.X.Offset + 66, 0, 0)
-    end)
+    -- UnibarMenu:GetPropertyChangedSignal("Size"):Connect(function()
+    --     unibar.Position = UDim2.new(0, UnibarMenu.Size.X.Offset + 66, 0, 0)
+    -- end)
 end
 
 function topbar:CreateTextWithIcon(TextWithIconConfig)
