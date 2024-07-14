@@ -84,18 +84,11 @@ frame.MouseLeave:Connect(function()
 end)
 ]]
 
-return topbar
-
 -- example
 
---[[
-
-local TopbarApp = loadstring(game:HttpGet("https://raw.githubusercontent.com/AlikSusFootages/RobloxTopBarApp/main/src/newfile.lua"))()
-
+local TopbarApp = topbar
 TopbarApp:CreateTextWithIcon({
     Icon = "user",
     Content = "example muhahaha",
     Order = 20
 })
-
-]]
