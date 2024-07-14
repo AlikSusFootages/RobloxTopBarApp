@@ -51,7 +51,7 @@ function topbar:CreateTextWithIcon(TextWithIconConfig)
     TextWithIconConfig.Content = TextWithIconConfig.Content or "Content"
     TextWithIconConfig.Order = TextWithIconConfig.Order or 20
     
-    local Frame = Instance.new("TextLabel", unibar)
+    local Frame = Instance.new("TextLabel", Parentframe)
     Frame.BackgroundColor3 = Color3.fromRGB(0,0,0)
     Frame.BackgroundTransparency = 0.3
     Frame.Size = UDim2.new(0,0,0,44)
