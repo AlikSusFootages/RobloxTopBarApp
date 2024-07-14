@@ -10,7 +10,7 @@ if unibar:FindFirstChild("TopBarAppV2") then
 else
     
     local unibar = Instance.new("Frame", unibar)
-    unibar.Size = UDim2.new(1,0,1,0)
+    unibar.Size = UDim2.new(1,0,1,2)
     unibar.Position = UDim2.new(0,88,0,0)
     unibar.BackgroundTransparency = 1
     unibar.Name = "TopBarAppV2"
@@ -19,7 +19,7 @@ else
     UIListLayout.FillDirection = "Horizontal"
     UIListLayout.Padding = UDim.new(0,12)
     UIListLayout.SortOrder = "LayoutOrder"
-    UIListLayout.VerticalAlignment = "Center"
+    UIListLayout.VerticalAlignment = "Bottom"
     UIListLayout.HorizontalAlignment = "Left"
     
 end
