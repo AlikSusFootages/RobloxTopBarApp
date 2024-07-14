@@ -13,11 +13,15 @@ local function GetIcon(Name)
     return nil 
 end
 
-local UnibarMenu = unibar.Parent.UnibarMenu
-
-UnibarMenu:GetPropertyChangedSignal("Size"):Connect(function()
-    unibar.Position = UDim2.new(0, UnibarMenu.Size.X.Offset, 0, 0)
-end)
+do
+    local UnibarMenu = unibar.Parent.UnibarMenu
+    
+    
+    --UnibarMenu:GetPropertyChangedSignal("Size"):Connect(function()
+    while true do
+        unibar.Position = UDim2.new(0, UnibarMenu.Size.X.Offset, 0, 0)
+    end)
+end
 
 function topbar:CreateTextWithIcon(TextWithIconConfig)
     TextWithIconConfig.Icon = TextWithIconConfig.Icon or ""
