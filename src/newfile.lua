@@ -13,6 +13,7 @@ UIListLayout.FillDirection = "Horizontal"
 UIListLayout.Padding = UDim.new(0,12)
 UIListLayout.SortOrder = LayoutOrder
 UIListLayout.VerticalAlignment = "Center"
+UIListLayout.HorizontalAlignment = "Ldft"
 
 
 local topbar = {}
