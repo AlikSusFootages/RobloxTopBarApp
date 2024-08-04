@@ -2,7 +2,7 @@ local TweenService = game:GetService("TweenService")
 
 local topbar = {} 
 
-if game.CoreGui.TopBar.TopBarFrame:FindFirstChild("UnibarLeftFrame") then else
+if game.CoreGui.TopBarApp.TopBarFrame:FindFirstChild("UnibarLeftFrame") then else
     game.CoreGui.TopBarApp.TopBarFrame.LeftFrame.ChatIcon.Size = UDim2.new(0, 32, 1, 0) 
     
     function topbar:CreateTextWithIcon(TextWithIconConfig) 
