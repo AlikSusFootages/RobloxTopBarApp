@@ -341,11 +341,6 @@ if game.CoreGui.TopBar.TopBarFrame:FindFirstChild("UnibarLeftFrame") then else
         frame.BackgroundTransparency = 1 
         frame.Name = "__TopBarApp__PushToggleTextWithIcon__"
         
-        
-        
-        game.CoreGui.TopBarApp.TopBarFrame.LeftFrame.ChatIcon.Size = UDim2.new(0, 32, 1, 0) 
-        
-        
         local frame2 = Instance.new("TextButton", frame) 
         frame2.Size = UDim2.new(1, 0, 0, 32) 
         frame2.BorderSizePixel = 0 
@@ -381,9 +376,9 @@ if game.CoreGui.TopBar.TopBarFrame:FindFirstChild("UnibarLeftFrame") then else
         if TogglePushTextWithIconConfig.Icon == "" then
             icon.Image = "rbxassetid://10723374641"
             frame.Size = UDim2.new(0, 33, 1, 0)
-            else
-                text.Size = UDim2.new(1, -12, 1, 0) 
-                frame.Size = UDim2.new(0, 33, 1, 0)
+        else
+            text.Size = UDim2.new(1, -12, 1, 0) 
+            frame.Size = UDim2.new(0, 33, 1, 0)
         end
         
         if TogglePushTextWithIconConfig.Content == "" then
@@ -391,9 +386,7 @@ if game.CoreGui.TopBar.TopBarFrame:FindFirstChild("UnibarLeftFrame") then else
         end
         
         
-        local anim = TweenService:Create(frame2, TweenInfo.new(0.5), {Position = UDim2.new(0, 0, 1, 0)}) 
-        
-        anim:Play() 
+        TweenService:Create(frame2, TweenInfo.new(0.5), {Position = UDim2.new(0, 0, 1, 0)}):Play() 
         
         local uicorner = Instance.new("UICorner", frame2) 
         uicorner.CornerRadius = UDim.new(0,8) 
