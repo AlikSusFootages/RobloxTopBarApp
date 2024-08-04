@@ -1,5 +1,8 @@
  local topbar = {} 
+ 
+game.CoreGui.TopBarApp.TopBarFrame.LeftFrame.ChatIcon.Size = UDim2.new(0, 32, 1, 0) 
   
+
  function topbar:CreateTextWithIcon(TextWithIconConfig) 
      TextWithIconConfig.Icon = TextWithIconConfig.Icon or ""
      TextWithIconConfig.Content = TextWithIconConfig.Content or "Content"
@@ -10,8 +13,6 @@
      frame.Name = "__TopBarApp__TextWithIcon__"
   
      local TweenService = game:GetService("TweenService") 
-  
-     game.CoreGui.TopBarApp.TopBarFrame.LeftFrame.ChatIcon.Size = UDim2.new(0, 32, 1, 0) 
   
   
      local frame2 = Instance.new("TextLabel", frame) 
